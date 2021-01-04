@@ -49,21 +49,21 @@ public void user_calls_with_http_request(String resource, String method) {
 		System.out.println(resourceAPI.getResource());
 		System.out.println("+++I am into git");
 		
-		
+		System.out.println("+++I am into git");
 		resspec =new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
 		
 		if(method.equalsIgnoreCase("POST"))
 		 response =res.when().post(resourceAPI.getResource());
 		else if(method.equalsIgnoreCase("GET"))
 			 response =res.when().get(resourceAPI.getResource());
-		
+		System.out.println("+++I am into git");
 }
 
 	@Then("the API call got success with status code {int}")
 	public void the_API_call_got_success_with_status_code(Integer int1) {
 	    // Write code here that turns the phrase above into concrete actions
 		assertEquals(response.getStatusCode(),200);
-		
+		System.out.println("+++I am into git");
 	
 	}
 
